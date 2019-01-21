@@ -11,24 +11,24 @@ ArrayBack(a);
 
 
 // task 2
-// function day(name) {
-//     var data = new Date();
-//     var time = data.getHours();
-//     if (time > 6 && time < 10) {
-//         alert("Good morning " + name);
-//     }
-//     if (time > 10 && time < 15) {
-//         alert("Good morning" + name);
-//     }
-//     if (time > 15 && time < 21) {
-//         alert("Good evening " + name);
-//     } else {
-//         alert("Good night" + name);
-//     }
-// }
-//
-// var name = "sergey";
-// day(name);
+function day(name) {
+    var data = new Date();
+    var time = data.getHours();
+    if (time > 6 && time < 10) {
+        alert("Good morning " + name);
+    }
+    if (time > 10 && time < 15) {
+        alert("Good morning" + name);
+    }
+    if (time > 15 && time < 21) {
+        alert("Good evening " + name);
+    } else if (time > 21 && time < 6){
+        alert("Good night" + name);
+    }
+}
+
+var name = "sergey";
+day(name);
 
 
 //task3
@@ -51,7 +51,7 @@ function PriceMask(number) {
 
 PriceMask(121348);
 
-document.ready
+
 
 //task 4
 function whatDay() {
@@ -63,15 +63,12 @@ function whatDay() {
 
     function aletrDay(number) {
         function text(text) {
-            window.onload = function () {
                 var div = document.createElement('div');
                 console.log(div);
                 div.className = 'data';
                 div.innerText = text;
                 console.log(text);
                 document.body.appendChild(div);
-
-            }
         }
 
         switch (number) {
