@@ -65,90 +65,33 @@
 //
 // //task 4
 function whatDay() {
-
-
-    a = prompt("enter number 1 to 7");
-    var flag = false;
-
-
-    function aletrDay(number) {
-        function text(text) {
-            var div = document.createElement('div');
-            console.log(div);
-            div.className = 'data';
-            div.innerText = text;
-            console.log(text);
-            document.body.appendChild(div);
-        }
-
-        arDay = {
-            "1": "monday",
-            "2": "tuesday",
-            "3": "wednesday",
-            "4": "thursday",
-            "5": "friday",
-            "6": "saturday",
-            "7": "sunday",
-        }
-
-        function numberDay(a) {
-         for key in arDay{
-
-         }
-        }
-        switch (number) {
-            case "1": {
-                var a = "monday";
-                text(a);
-                break;
-            }
-            case "2": {
-                var a = "tuesday";
-                text(a);
-                break;
-            }
-            case "3": {
-                var a = "wednesday";
-                text(a);
-                break;
-            }
-            case "4": {
-                var a = "thursday";
-                text(a);
-                break;
-            }
-            case "5": {
-                var a = "friday";
-                text(a);
-                break;
-            }
-            case "6": {
-                var a = "saturday";
-                text(a);
-                break;
-            }
-            case "7": {
-                var a = "sunday";
-                text(a);
-                break;
-            }
-            default: {
-                alert("number not 1 to 7");
-                flag = true;
-            }
-
-
-        }
-
+    flag = true;
+    arDay = ["monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",]
+    function text(text) {
+        var div = document.createElement('div');
+        div.className = 'data';
+        document.body.appendChild(div);
+        div.innerText = text;
     }
-
-
-    aletrDay(a);
-    if (flag) {
-        b = prompt("enter number 1 to 7");
-        aletrDay(b);
+    function numberDay(a) {
+        var dayName = arDay[a - 1];
+        if (dayName != undefined) {
+            text(dayName)
+            flag = false;
+        } else {
+            alert("number not 1 to 7");
+        }
     }
-
+    while (flag) {
+        a = prompt("enter number 1 to 7");
+        numberDay(a);
+    }
 }
 
 whatDay();
