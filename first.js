@@ -17,7 +17,7 @@ var result = ArrayBack(a);
 
 // // task 2
 function day(name) {
-    if (name != ""){
+    if (name !== ""){
         var name = name;
     }else{
         var name = "people";
